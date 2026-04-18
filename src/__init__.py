@@ -8,6 +8,7 @@ from .config import (
 )
 from .data_loader import load_airlines, load_airports, load_flights
 from .integration import merge_airline_lookup, merge_airport_lookup, save_prepared_dataset
+from .predict import load_model, predict_delay_risk, prepare_prediction_input, save_model
 from .preprocessing import (
     add_phase3_features,
     cap_outliers_iqr,
@@ -30,8 +31,10 @@ __all__ = [
     "merge_airline_lookup",
     "merge_airport_lookup",
     "save_prepared_dataset",
-    "get_phase3_columns",
-    "get_phase3_drop_reasons",
+    "save_model",
+    "load_model",
+    "prepare_prediction_input",
+    "predict_delay_risk",
     "select_phase3_data",
     "filter_phase3_rows",
     "clean_phase3_missing_values",
